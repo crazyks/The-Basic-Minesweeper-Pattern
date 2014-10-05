@@ -1,0 +1,1028 @@
+package com.crazyks.matrixtrans;
+
+import com.crazyks.sum.R;
+
+public class FinalMatrix {
+	public static final int CELL_CLOSED = R.drawable.block_close;
+	public static final int CELL_OPENED = R.drawable.mine_around_0;
+	public static final int CELL_TRANSP = R.drawable.wall;
+	
+	/*
+	 * CASE BASIC
+	 * □□□
+	 * □ □
+	 * □□□
+	 */
+	// 0
+	public static final int[][] CASE_BASIC_0_1 = {
+	    {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+	    {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+	// 1
+	public static final int[][] CASE_BASIC_1_1 = {
+	    {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+	    {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+	public static final int[][] CASE_BASIC_1_2 = {
+	    {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+	    {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+	// 2
+    public static final int[][] CASE_BASIC_2_1 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_2_2 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_2_3 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_2_4 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_2_5 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_2_6 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED}};
+    // 3
+    public static final int[][] CASE_BASIC_3_1 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_3_2 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_3_3 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_3_4 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_3_5 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_3_6 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_3_7 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_3_8 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_3_9 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_3_10 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED}};
+    // 4
+    public static final int[][] CASE_BASIC_4_1 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_4_2 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_4_3 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_4_4 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_4_5 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_4_6 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_4_7 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_4_8 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_4_9 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_4_10 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_4_11 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_4_12 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_4_13 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED}};
+    // 5
+    public static final int[][] CASE_BASIC_5_1 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_5_2 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_5_3 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_5_4 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_5_5 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_5_6 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_5_7 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_5_8 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_5_9 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_5_10 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED}};
+    // 6
+    public static final int[][] CASE_BASIC_6_1 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED}};
+    public static final int[][] CASE_BASIC_6_2 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_6_3 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_6_4 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_6_5 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED}};
+    public static final int[][] CASE_BASIC_6_6 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED}};
+    // 7
+	public static final int[][] CASE_BASIC_7_1 = {
+	    {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+	    {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED}};
+	public static final int[][] CASE_BASIC_7_2 = {
+	    {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+	    {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED}};
+	// 8
+	public static final int[][] CASE_BASIC_8_1 = {
+	    {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+	    {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED}};
+	
+	/*
+	 * CASE ZERO
+	 * □□□
+	 */
+	// 0
+	public static final int[][] CASE_ZERO_0_1 = {
+	    {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	// 1
+	public static final int[][] CASE_ZERO_1_1 = {
+	    {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_ZERO_1_2 = {
+	    {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	// 2
+	public static final int[][] CASE_ZERO_2_1 = {
+	    {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_ZERO_2_2 = {
+	    {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	// 3
+	public static final int[][] CASE_ZERO_3_1 = {
+	    {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	
+	/*
+     * CASE ONE
+     * □□□
+     * □
+     * □
+     */
+	// 0
+    public static final int[][] CASE_ONE_0_1 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    // 1
+    public static final int[][] CASE_ONE_1_1 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_1_2 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_1_3 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    // 2
+    public static final int[][] CASE_ONE_2_1 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_2_2 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_2_3 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_2_4 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_2_5 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_2_6 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    // 3
+    public static final int[][] CASE_ONE_3_1 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_3_2 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_3_3 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_3_4 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_3_5 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_3_6 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    // 4
+    public static final int[][] CASE_ONE_4_1 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_4_2 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_ONE_4_3 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    // 5
+    public static final int[][] CASE_ONE_5_1 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+	
+	/*
+	 * CASE TWO
+	 * □□□
+	 * □ □
+	 */
+	// 0
+	public static final int[][] CASE_TWO_0_1 = {
+	    {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	// 1
+	public static final int[][] CASE_TWO_1_1 = {
+	    {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_1_2 = {
+	    {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_1_3 = {
+	    {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	// 2
+	public static final int[][] CASE_TWO_2_1 = {
+	    {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_2_2 = {
+	    {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_2_3 = {
+	    {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_2_4 = {
+	    {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_2_5 = {
+	    {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_2_6 = {
+	    {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	// 3
+	public static final int[][] CASE_TWO_3_1 = {
+	    {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_3_2 = {
+	    {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_3_3 = {
+	    {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_3_4 = {
+	    {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_3_5 = {
+	    {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_3_6 = {
+	    {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	// 4
+	public static final int[][] CASE_TWO_4_1 = {
+	    {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_4_2 = {
+	    {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	public static final int[][] CASE_TWO_4_3 = {
+	    {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	// 5
+	public static final int[][] CASE_TWO_5_1 = {
+	    {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+	    {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_TRANSP, CELL_TRANSP, CELL_TRANSP}};
+	
+	/*
+	 * CASE THREE
+	 * □□□
+	 * □ □
+	 * □
+	 */
+	// 0
+	public static final int[][] CASE_THREE_0_1 = {
+	    {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+	// 1
+    public static final int[][] CASE_THREE_1_1 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_1_2 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_1_3 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_1_4 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_1_5 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_1_6 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+	// 2
+    public static final int[][] CASE_THREE_2_1 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_2 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_3 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_4 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_5 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_6 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_7 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_8 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_9 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_10 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_11 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_12 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_13 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_14 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_2_15 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+	// 3
+    public static final int[][] CASE_THREE_3_1 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_2 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_3 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_4 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_5 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_6 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_7 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_8 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_9 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_10 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_11 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_12 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_13 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_14 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_15 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_16 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_17 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_18 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_19 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_3_20 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+	// 4
+    public static final int[][] CASE_THREE_4_1 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_2 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_3 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_4 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_5 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_6 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_7 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_8 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_9 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_10 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_11 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_12 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_13 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_14 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_4_15 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+	// 5
+    public static final int[][] CASE_THREE_5_1 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_5_2 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_5_3 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_5_4 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_5_5 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+    public static final int[][] CASE_THREE_5_6 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+	// 6
+    public static final int[][] CASE_THREE_6_1 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_TRANSP}};
+	
+	/*
+	 * CASE FOUR
+	 * □□□
+	 * □ □
+	 * □□
+	 */
+	// 0
+	public static final int[][] CASE_FOUR_0_1 = {
+	    {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+	    {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+	    {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    // 1
+    public static final int[][] CASE_FOUR_1_1 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_1_2 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_1_3 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_1_4 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    // 2
+    public static final int[][] CASE_FOUR_2_1 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_2_2 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_2_3 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_2_4 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_2_5 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_2_6 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_2_7 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_2_8 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_2_9 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_2_10 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_2_11 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_2_12 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    // 3
+    public static final int[][] CASE_FOUR_3_1 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_2 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_3 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_4 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_5 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_6 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_7 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_8 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_9 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_10 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_11 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_12 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_13 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_14 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_15 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_16 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_17 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_18 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_19 = {
+        {CELL_OPENED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_3_20 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    // 4
+    public static final int[][] CASE_FOUR_4_1 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_2 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_3 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_4 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_5 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_6 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_7 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_8 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_9 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_10 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_11 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_12 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_13 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_14 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_15 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_16 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_17 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_18 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_19 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_4_20 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    // 5
+    public static final int[][] CASE_FOUR_5_1 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_5_2 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_5_3 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_5_4 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_5_5 = {
+        {CELL_OPENED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_5_6 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_5_7 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_5_8 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_OPENED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_5_9 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_5_10 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_OPENED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_5_11 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_5_12 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_OPENED, CELL_CLOSED, CELL_TRANSP}};
+    // 6
+    public static final int[][] CASE_FOUR_6_1 = {
+        {CELL_OPENED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_6_2 = {
+        {CELL_CLOSED, CELL_OPENED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_6_3 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_OPENED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+    public static final int[][] CASE_FOUR_6_4 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_OPENED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+	// 7
+    public static final int[][] CASE_FOUR_7_1 = {
+        {CELL_CLOSED, CELL_CLOSED, CELL_CLOSED},
+        {CELL_CLOSED, CELL_TRANSP, CELL_CLOSED},
+        {CELL_CLOSED, CELL_CLOSED, CELL_TRANSP}};
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SUM!</string>
+    <string name="app_name">StrengthenUrMemory</string>
+    <string name="the_type">Type</string>
+    <string name="the_num">Number</string>
+    <string name="the_case">Case</string>
+    <string name="the_dir">Direction</string>
+    <string name="prev">[</string>
+    <string name="next">]</string>
+    <string name="sn">Serial Number</string>
+    <string name="pw">Password</string>
+    <string name="title">I wanna check your identity</string>
+    <string name="ok">OK</string>
+    <string name="quit">Bye</string>
+    <string name="fail">You are not the one, bye.</string>
+
+</resources>
